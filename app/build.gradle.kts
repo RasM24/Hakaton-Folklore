@@ -4,6 +4,7 @@ plugins {
 
 dependencies {
 	implementation(project(":feature-map"))
+	implementation(project(":feature-interactive"))
 	implementation(project(":component-deeplink"))
 	implementation(project(":component-navigation"))
 

@@ -30,6 +30,7 @@ includeBuild("gradle-convection")
 
 include(":app")
 include(":feature-map")
+include(":feature-interactive")
 
 include(":widget-audiogid")
 include(":widget-panorama")
