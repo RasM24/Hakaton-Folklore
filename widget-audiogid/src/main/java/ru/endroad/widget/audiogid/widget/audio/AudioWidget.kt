@@ -3,7 +3,6 @@ package ru.endroad.widget.audiogid.widget.audio
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.FrameLayout
-import android.widget.ProgressBar
 import android.widget.SeekBar
 import androidx.lifecycle.coroutineScope
 import androidx.lifecycle.findViewTreeLifecycleOwner
@@ -22,7 +21,6 @@ class AudioWidget @JvmOverloads constructor(
 	defStyleRes: Int = 0
 ) : FrameLayout(context, attributeSet, defStyleAttr, defStyleRes) {
 
-	private val loadProgress: ProgressBar
 	private val audioProgress: SeekBar
 
 	private val lifecycleScope get() = findViewTreeLifecycleOwner().let(::requireNotNull).lifecycle.coroutineScope
@@ -30,9 +28,7 @@ class AudioWidget @JvmOverloads constructor(
 	init {
 		inflate(context, R.layout.audio_widget, this)
 
-		loadProgress = findViewById(R.id.audio_widget_load_progress)
 		audioProgress = findViewById(R.id.audio_widget_audio_progress)
-
 	}
 
 	//ОСТОРОЖНО, ГОВНОКОД
@@ -63,15 +59,7 @@ class AudioWidget @JvmOverloads constructor(
 		when (state) {
 			AudioWidgetState.Stopped -> Unit
 			AudioWidgetState.Paused  -> Unit
-
-			AudioWidgetState.Loading -> {
-				loadProgress.visibility = VISIBLE
-			}
-
-			AudioWidgetState.Playing -> {
-				loadProgress.visibility = GONE
-				audioProgress.visibility = VISIBLE
-			}
+			AudioWidgetState.Playing -> Unit
 		}
 	}
 

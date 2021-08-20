@@ -24,7 +24,6 @@ class AudiogidBottomSheet : BaseBottomSheetFragment() {
 		audioWidget.setAudio(audio) {
 			when (it) {
 				AudioWidgetState.Stopped -> fabAudio.setImageResource(R.drawable.ic_play)
-				AudioWidgetState.Loading -> fabAudio.setImageResource(R.drawable.ic_pause)
 				AudioWidgetState.Playing -> fabAudio.setImageResource(R.drawable.ic_pause)
 				AudioWidgetState.Paused  -> fabAudio.setImageResource(R.drawable.ic_play)
 			}
