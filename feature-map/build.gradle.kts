@@ -3,11 +3,10 @@ plugins {
 }
 
 dependencies {
+	implementation(project(":widget-panorama"))
 	implementation(project(":component-common"))
 	implementation(project(":component-navigation"))
 	implementation(project(":shared-spot"))
-	//TODO избавиться от зависимости
-	implementation(project(":feature-interactive"))
 
 	implementation(AndroidX.core)
 	implementation(AndroidX.appcompat)

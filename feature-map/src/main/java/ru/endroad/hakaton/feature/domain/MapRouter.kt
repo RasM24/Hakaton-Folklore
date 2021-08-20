@@ -1,6 +1,6 @@
 package ru.endroad.hakaton.feature.domain
 
-import ru.endroad.hakaton.feature.interactive.enity.PanoramaImage
+import ru.endroad.widget.panorama.image.PanoramaImage
 
 interface MapRouter {
 

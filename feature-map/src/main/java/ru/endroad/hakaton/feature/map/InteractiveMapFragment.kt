@@ -16,13 +16,13 @@ import ru.endroad.hakaton.feature.extension.prepareMarkerClickListener
 import ru.endroad.hakaton.feature.extension.requestLocationPermissions
 import ru.endroad.hakaton.feature.extension.setOnBubbleClickListener
 import ru.endroad.hakaton.feature.extension.setupDefaultCameraPosition
-import ru.endroad.hakaton.feature.interactive.enity.PanoramaImage
 import ru.endroad.hakaton.shared.spot.data.SpotDataSource
 import ru.endroad.hakaton.shared.spot.entity.Parking
 import ru.endroad.hakaton.shared.spot.entity.PhotoSpot
 import ru.endroad.hakaton.shared.spot.entity.Sight
 import ru.endroad.hakaton.shared.spot.entity.Spot
 import ru.endroad.hakaton.shared.spot.entity.Toilet
+import ru.endroad.widget.panorama.image.panoramaImage1
 
 internal class InteractiveMapFragment : BaseFragment() {
 
@@ -58,7 +58,7 @@ internal class InteractiveMapFragment : BaseFragment() {
 	private fun markerClickHandler(spot: Spot) {
 		when (spot) {
 			is Parking   -> Unit
-			is PhotoSpot -> router.openPanoramaBottomSheet(PanoramaImage(""))
+			is PhotoSpot -> router.openPanoramaBottomSheet(panoramaImage1)
 			is Sight     -> router.openAudiogidBottomSheet()
 			is Toilet    -> Unit
 		}

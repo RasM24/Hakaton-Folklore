@@ -4,10 +4,10 @@ import org.koin.java.KoinJavaComponent
 import ru.endroad.component.navigation.command.Command
 import ru.endroad.component.navigation.navigator.Navigator
 import ru.endroad.hakaton.feature.domain.MapRouter
-import ru.endroad.hakaton.feature.interactive.enity.PanoramaImage
 import ru.endroad.hakaton.feature.interactive.view.AudiogidDestination
 import ru.endroad.hakaton.feature.interactive.view.PanoramaDestination
 import ru.endroad.hakaton.folklore.navigation.di.rootNavigatorQualifier
+import ru.endroad.widget.panorama.image.PanoramaImage
 
 class MapRouterImpl : MapRouter {
 

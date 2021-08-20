@@ -5,9 +5,9 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import ru.endroad.component.common.BaseBottomSheetFragment
 import ru.endroad.component.common.withArguments
 import ru.endroad.hakaton.feature.interactive.R
-import ru.endroad.hakaton.feature.interactive.enity.PanoramaImage
-import ru.endroad.hakaton.feature.interactive.enity.textures
 import ru.endroad.widget.panorama.PanoramaView
+import ru.endroad.widget.panorama.image.PanoramaImage
+import ru.endroad.widget.panorama.image.textures
 
 class PanoramaBottomSheet : BaseBottomSheetFragment() {
 
