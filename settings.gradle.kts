@@ -29,6 +29,9 @@ rootProject.name = "Hakaton-Folklore"
 includeBuild("gradle-convection")
 
 include(":app")
+
+include(":widget-audiogid")
+
 include(":component-navigation")
 include(":component-common")
 include(":component-deeplink")
