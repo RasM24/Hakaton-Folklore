@@ -33,6 +33,7 @@ include(":app")
 include(":widget-audiogid")
 include(":widget-panorama")
 
+include(":shared-spot")
 include(":component-navigation")
 include(":component-common")
 include(":component-deeplink")

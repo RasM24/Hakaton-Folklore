@@ -1,0 +1,8 @@
+<resources>
+	<string name="spot_category_parking">Парковка</string>
+	<string name="spot_category_photo">Фотоместо</string>
+	<string name="spot_category_sight">Достопримечательность</string>
+	<string name="spot_category_toilet">Туалет</string>
+
+	<string name="sight_opera">Театр оперы и балета</string>
+</resources>
