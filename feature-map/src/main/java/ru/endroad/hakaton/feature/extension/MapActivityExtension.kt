@@ -15,6 +15,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import ru.endroad.hakaton.feature.map.BubbleAdapter
 import ru.endroad.hakaton.shared.spot.entity.Position
 import ru.endroad.hakaton.shared.spot.entity.Spot
 
@@ -28,8 +29,9 @@ internal fun GoogleMap.enableUserLocation() {
 	isMyLocationEnabled = true
 }
 
-internal fun GoogleMap.prepareMarkerClickListener() {
+internal fun GoogleMap.prepareMarkerClickListener(clickHandler: (Spot) -> Unit) {
 	setOnMarkerClickListener {
+		(it.tag as? Spot)?.let(clickHandler)
 		expandMarker(it)
 		true
 	}
@@ -42,6 +44,10 @@ internal fun GoogleMap.expandMarker(marker: Marker) {
 
 internal fun GoogleMap.setOnBubbleClickListener(onClickListener: (Spot) -> Unit) {
 	setOnInfoWindowClickListener { (it.tag as? Spot)?.let { spot -> onClickListener(spot) } }
+}
+
+internal fun GoogleMap.prepareBubbleAdapter(context: Context) {
+	setInfoWindowAdapter(BubbleAdapter(context))
 }
 
 internal fun GoogleMap.setupDefaultCameraPosition() {

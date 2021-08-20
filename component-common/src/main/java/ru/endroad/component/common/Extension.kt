@@ -1,5 +1,6 @@
 package ru.endroad.component.common
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,3 +15,6 @@ inline fun <reified F : Fragment> F.withArguments(vararg pairs: Pair<String, Any
 
 fun ViewGroup.inflate(@LayoutRes layoutRes: Int): View =
 	LayoutInflater.from(context).inflate(layoutRes, this, false)
+
+fun Context.inflate(@LayoutRes layoutRes: Int): View =
+	LayoutInflater.from(this).inflate(layoutRes, null, false)

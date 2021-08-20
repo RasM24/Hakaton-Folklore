@@ -16,5 +16,7 @@ class HubRouterImpl : HubRouter {
 		rootNavigator.execute(Command.Open(InteractiveMapDestination))
 	}
 
-	override fun openDeeplinkDestination(destination: Destination) = Unit
+	override fun openDeeplinkDestination(destination: Destination) {
+		rootNavigator.execute(Command.Open(destination))
+	}
 }
