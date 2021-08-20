@@ -29,6 +29,7 @@ rootProject.name = "Hakaton-Folklore"
 includeBuild("gradle-convection")
 
 include(":app")
+include(":feature-map")
 
 include(":widget-audiogid")
 include(":widget-panorama")
