@@ -31,11 +31,13 @@ includeBuild("gradle-convection")
 include(":app")
 include(":feature-map")
 include(":feature-interactive")
+include(":feature-route")
 
 include(":widget-audiogid")
 include(":widget-panorama")
 
 include(":shared-spot")
+include(":shared-route")
 include(":component-navigation")
 include(":component-common")
 include(":component-deeplink")
