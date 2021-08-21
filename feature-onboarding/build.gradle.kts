@@ -10,4 +10,7 @@ dependencies {
 	implementation(AndroidX.core)
 	implementation(AndroidX.appcompat)
 	implementation(AndroidX.material)
+
+	implementation(Koin.core)
+	implementation(Koin.android)
 }

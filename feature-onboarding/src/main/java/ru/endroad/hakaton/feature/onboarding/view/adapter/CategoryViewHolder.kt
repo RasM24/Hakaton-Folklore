@@ -10,7 +10,7 @@ import ru.endroad.hakaton.feature.onboarding.entity.Listing
 class CategoryViewHolder(
 	private val onClickListener: (Button) -> Unit,
 	viewParent: ViewGroup
-) : ListingViewHolder(viewParent.inflate(R.layout.item_category)) {
+) : ListingViewHolder(viewParent.inflate(R.layout.item_button)) {
 
 	fun bind(item: Listing.CategoryItem) {
 		itemView.setOnClickListener { onClickListener(item.button) }

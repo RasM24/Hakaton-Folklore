@@ -9,10 +9,10 @@ sealed class Listing {
 }
 
 enum class Button(val icon: Image, val title: String) {
-	COMICS(Image(R.drawable.ic_icon_comic), "Комиксы"),
-	AUDIOGID(Image(R.drawable.ic_icon_audio), "Аудиогид"),
-	ROUTES(Image(R.drawable.ic_icon_parking), "Маршруты"),
-	MAP(Image(R.drawable.ic_icon_building), "На карту"),
+	COMICS(Image(R.drawable.ic_button_comics), "Комиксы"),
+	AUDIOGID(Image(R.drawable.ic_button_audiogid), "Аудиогид"),
+	ROUTES(Image(R.drawable.ic_button_routes), "Маршруты"),
+	MAP(Image(R.drawable.ic_button_map), "На карту"),
 }
 
 enum class Comics(val title: String) {
