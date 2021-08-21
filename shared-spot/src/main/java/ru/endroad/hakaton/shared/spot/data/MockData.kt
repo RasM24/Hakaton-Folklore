@@ -1,11 +1,14 @@
 package ru.endroad.hakaton.shared.spot.data
 
 import ru.endroad.hakaton.shared.spot.R
+import ru.endroad.hakaton.shared.spot.entity.AudioSpot
 import ru.endroad.hakaton.shared.spot.entity.ComicsSpot
 import ru.endroad.hakaton.shared.spot.entity.Image
 import ru.endroad.hakaton.shared.spot.entity.PanoramaPhotoSpot
 import ru.endroad.hakaton.shared.spot.entity.Position
 import ru.endroad.hakaton.shared.spot.entity.Text
+
+internal val audiogidSpot = AudioSpot(0, Position(58.536558, 31.273916), Text(R.string.audio_novgorod), Image(R.drawable.photo_sight_opera))
 
 internal val panoramaSpot1 = PanoramaPhotoSpot(0, Position(58.559221, 31.260249), Text(R.string.panorama_winter), "point/1/")
 internal val panoramaSpot2 = PanoramaPhotoSpot(0, Position(58.555281, 31.300761), Text(R.string.panorama_ped), "point/2/")

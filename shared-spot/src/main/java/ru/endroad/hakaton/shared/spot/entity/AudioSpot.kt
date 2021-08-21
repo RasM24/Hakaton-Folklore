@@ -2,7 +2,7 @@ package ru.endroad.hakaton.shared.spot.entity
 
 import ru.endroad.hakaton.shared.spot.R
 
-data class Sight(
+data class AudioSpot(
 	override val id: Long,
 	override val position: Position,
 	override val name: Text,

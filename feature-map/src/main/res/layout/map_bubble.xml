@@ -22,7 +22,7 @@
 			android:id="@+id/bubble_info"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="ул. Красноярского рабочего 192/к1"
+			android:text="Немного более развернутое описание к легендам"
 			android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
 
 	</LinearLayout>

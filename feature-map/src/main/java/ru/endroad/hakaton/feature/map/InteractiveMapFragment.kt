@@ -22,7 +22,7 @@ import ru.endroad.hakaton.shared.route.data.russaRoute
 import ru.endroad.hakaton.shared.spot.data.SpotDataSource
 import ru.endroad.hakaton.shared.spot.entity.ComicsSpot
 import ru.endroad.hakaton.shared.spot.entity.PanoramaPhotoSpot
-import ru.endroad.hakaton.shared.spot.entity.Sight
+import ru.endroad.hakaton.shared.spot.entity.AudioSpot
 import ru.endroad.hakaton.shared.spot.entity.Spot
 
 internal class InteractiveMapFragment : BaseFragment() {
@@ -53,7 +53,7 @@ internal class InteractiveMapFragment : BaseFragment() {
 		googleMap.prepareBubbleAdapter(requireContext())
 		googleMap.setOnBubbleClickListener { }
 
-		spotDataSource.getSightList().forEach { googleMap.addSpot(requireContext(), it) }
+		spotDataSource.getAudioList().forEach { googleMap.addSpot(requireContext(), it) }
 		spotDataSource.getComics().forEach { googleMap.addSpot(requireContext(), it) }
 		spotDataSource.getPhotoSpotList().forEach { googleMap.addSpot(requireContext(), it) }
 	}
@@ -61,7 +61,7 @@ internal class InteractiveMapFragment : BaseFragment() {
 	private fun markerClickHandler(spot: Spot) {
 		when (spot) {
 			is PanoramaPhotoSpot -> router.openPanoramaBottomSheet(spot)
-			is Sight             -> router.openAudiogidBottomSheet()
+			is AudioSpot         -> router.openAudiogidBottomSheet()
 			is ComicsSpot        -> router.openComicsBottomSheet(spot)
 		}
 	}
