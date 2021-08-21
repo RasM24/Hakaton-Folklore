@@ -8,7 +8,7 @@ class DeeplinkConverter {
 
 	fun convert(deeplink: Deeplink): Destination? =
 		when (deeplink.path) {
-			"/map/interactive" -> InteractiveMapDestination
+			"/map/interactive" -> InteractiveMapDestination()
 			else               -> null
 		}
 }

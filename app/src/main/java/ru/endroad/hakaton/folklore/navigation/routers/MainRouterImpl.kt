@@ -16,7 +16,7 @@ class MainRouterImpl : MainRouter {
 	private val rootNavigator: Navigator by KoinJavaComponent.inject(Navigator::class.java, rootNavigatorQualifier)
 
 	override fun openMap() {
-		rootNavigator.execute(Command.Open(InteractiveMapDestination))
+		rootNavigator.execute(Command.Open(InteractiveMapDestination()))
 	}
 
 	override fun openComics(comics: Comics) {

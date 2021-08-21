@@ -1,33 +1,46 @@
 package ru.endroad.hakaton.feature.map
 
 import android.view.View
-import android.widget.Button
+import androidx.fragment.app.Fragment
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.SupportMapFragment
 import org.koin.android.ext.android.inject
 import ru.endroad.component.common.BaseFragment
+import ru.endroad.component.common.withArguments
 import ru.endroad.hakaton.feature.domain.MapRouter
 import ru.endroad.hakaton.feature.extension.addRemoteSpot
 import ru.endroad.hakaton.feature.extension.addSpot
 import ru.endroad.hakaton.feature.extension.checkLocationProvidesEnabled
-import ru.endroad.hakaton.feature.extension.drawRoute
 import ru.endroad.hakaton.feature.extension.enableUserLocation
 import ru.endroad.hakaton.feature.extension.handleLocationPermissions
 import ru.endroad.hakaton.feature.extension.isGrantedLocationPermissions
 import ru.endroad.hakaton.feature.extension.prepareBubbleAdapter
 import ru.endroad.hakaton.feature.extension.prepareMarkerClickListener
 import ru.endroad.hakaton.feature.extension.requestLocationPermissions
+import ru.endroad.hakaton.feature.extension.setCameraPosition
 import ru.endroad.hakaton.feature.extension.setOnBubbleClickListener
 import ru.endroad.hakaton.feature.extension.setupDefaultCameraPosition
-import ru.endroad.hakaton.shared.route.data.russaRoute
 import ru.endroad.hakaton.shared.spot.data.SpotDataSource
+import ru.endroad.hakaton.shared.spot.entity.AudioSpot
 import ru.endroad.hakaton.shared.spot.entity.ComicsSpot
 import ru.endroad.hakaton.shared.spot.entity.PanoramaPhotoSpot
-import ru.endroad.hakaton.shared.spot.entity.AudioSpot
+import ru.endroad.hakaton.shared.spot.entity.Position
 import ru.endroad.hakaton.shared.spot.entity.Spot
 import ru.endroad.hakaton.shared.spot.remote.RemoteDataSource
 
 internal class InteractiveMapFragment : BaseFragment() {
+
+	companion object {
+
+		private const val POSITION = "position"
+
+		fun newInstance(position: Position?): Fragment =
+			InteractiveMapFragment().withArguments(
+				POSITION to position
+			)
+	}
+
+	private val position: Position? by lazy { arguments?.getSerializable(POSITION) as? Position }
 
 	override val layout = R.layout.fragment_interactive_map
 
@@ -47,7 +60,8 @@ internal class InteractiveMapFragment : BaseFragment() {
 
 		googleMap.uiSettings.isMapToolbarEnabled = true
 		googleMap.checkPermission()
-		googleMap.setupDefaultCameraPosition()
+
+		position?.let(googleMap::setCameraPosition) ?: googleMap.setupDefaultCameraPosition()
 
 //		googleMap.drawRoute(russaRoute)
 		googleMap.prepareMarkerClickListener(::markerClickHandler)
