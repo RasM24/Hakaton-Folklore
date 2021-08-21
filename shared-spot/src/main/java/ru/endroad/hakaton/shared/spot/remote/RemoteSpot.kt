@@ -12,10 +12,7 @@ data class RemoteSpot(
 )
 
 enum class SpotType(val icon: Image) {
-	Audio(Image(R.drawable.ic_icon_audio)),
-	Comic(Image(R.drawable.ic_icon_comic)),
-	Meal(Image(R.drawable.ic_icon_meal)),
-	Parking(Image(R.drawable.ic_icon_parking)),
-	Photo(Image(R.drawable.ic_icon_photo)),
-	Toilet(Image(R.drawable.ic_icon_toilet)),
+	Building(Image(R.drawable.ic_icon_building)),
+	Water(Image(R.drawable.ic_icon_water)),
+	Stone(Image(R.drawable.ic_icon_stone)),
 }
