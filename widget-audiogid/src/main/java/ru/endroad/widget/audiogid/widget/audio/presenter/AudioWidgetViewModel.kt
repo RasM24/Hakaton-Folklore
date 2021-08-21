@@ -57,7 +57,12 @@ class AudioWidgetViewModel(
 	}
 
 	override fun onCleared() {
-		notice(AudioWidgetEvent.Stop)
+		clear()
 		super.onCleared()
+	}
+
+	 fun clear(){
+		notice(AudioWidgetEvent.Stop)
+
 	}
 }

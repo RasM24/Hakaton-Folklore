@@ -12,13 +12,15 @@ class AudiogidBottomSheet : BaseBottomSheetFragment() {
 
 	override val layout = R.layout.audiogid_fragment
 
+	private lateinit var audioWidget: AudioWidget
+
 	override fun setupViewComponents(parent: View) {
 		setupAudioWidget(parent)
 	}
 
 	private fun setupAudioWidget(parent: View) {
 		val fabAudio = parent.findViewById<FloatingActionButton>(R.id.fab_audio)
-		val audioWidget = parent.findViewById<AudioWidget>(R.id.audio_widget)
+		audioWidget = parent.findViewById(R.id.audio_widget)
 		val audio = Audio(R.raw.audio_kraevedcheski)
 
 		audioWidget.setAudio(audio) {
@@ -30,5 +32,10 @@ class AudiogidBottomSheet : BaseBottomSheetFragment() {
 		}
 
 		fabAudio.setOnClickListener { audioWidget.changeState() }
+	}
+
+	override fun onDestroy() {
+		super.onDestroy()
+		audioWidget.stop()
 	}
 }

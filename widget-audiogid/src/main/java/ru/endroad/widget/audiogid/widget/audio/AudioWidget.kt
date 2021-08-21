@@ -85,4 +85,8 @@ class AudioWidget @JvmOverloads constructor(
 	fun changeState() {
 		viewModel.notice(AudioWidgetEvent.ChangeState)
 	}
+
+	fun stop() {
+		viewModel.clear()
+	}
 }
