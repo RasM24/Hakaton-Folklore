@@ -10,6 +10,6 @@ data class PanoramaPhotoSpot(
 	val path: String,
 ) : Spot, Serializable {
 
-	override val icon = Image(R.drawable.ic_spot_photo)
+	override val icon = Image(R.drawable.ic_icon_photo)
 	override val category = Text(R.string.spot_category_photo)
 }

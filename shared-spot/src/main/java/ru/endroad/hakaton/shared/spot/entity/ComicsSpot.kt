@@ -10,6 +10,6 @@ class ComicsSpot(
 	val image: Image,
 ) : Spot, Serializable {
 
-	override val icon = Image(R.drawable.ic_spot_toilet)
+	override val icon = Image(R.drawable.ic_icon_comic)
 	override val category = Text(R.string.spot_category_toilet)
 }

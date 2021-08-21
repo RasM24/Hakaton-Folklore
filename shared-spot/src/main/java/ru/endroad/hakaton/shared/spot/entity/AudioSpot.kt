@@ -9,6 +9,6 @@ data class AudioSpot(
 	val headImage: Image,
 ) : Spot {
 
-	override val icon = Image(R.drawable.ic_spot_sight)
+	override val icon = Image(R.drawable.ic_icon_audio)
 	override val category = Text(R.string.spot_category_sight)
 }
