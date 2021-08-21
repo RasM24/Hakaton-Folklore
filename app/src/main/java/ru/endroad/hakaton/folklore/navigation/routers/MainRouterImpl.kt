@@ -6,9 +6,9 @@ import ru.endroad.component.navigation.navigator.Navigator
 import ru.endroad.hakaton.feature.interactive.view.AudiogidDestination
 import ru.endroad.hakaton.feature.map.InteractiveMapDestination
 import ru.endroad.hakaton.feature.onboarding.domain.MainRouter
-import ru.endroad.hakaton.feature.onboarding.entity.Comics
 import ru.endroad.hakaton.feature.route.view.RouteRecommendationDestination
 import ru.endroad.hakaton.folklore.navigation.di.rootNavigatorQualifier
+import ru.endroad.hakaton.shared.spot.entity.Comics
 
 class MainRouterImpl : MainRouter {
 

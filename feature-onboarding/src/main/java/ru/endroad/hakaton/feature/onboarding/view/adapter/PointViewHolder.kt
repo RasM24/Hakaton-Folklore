@@ -3,8 +3,8 @@ package ru.endroad.hakaton.feature.onboarding.view.adapter
 import android.view.ViewGroup
 import android.widget.TextView
 import ru.endroad.hakaton.feature.onboarding.R
-import ru.endroad.hakaton.feature.onboarding.entity.Comics
 import ru.endroad.hakaton.feature.onboarding.entity.Listing
+import ru.endroad.hakaton.shared.spot.entity.Comics
 
 class PointViewHolder(
 	private val onClickListener: (Comics) -> Unit,

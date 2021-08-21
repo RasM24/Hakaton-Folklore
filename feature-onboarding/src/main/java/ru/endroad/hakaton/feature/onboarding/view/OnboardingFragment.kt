@@ -8,9 +8,9 @@ import ru.endroad.component.common.showToast
 import ru.endroad.hakaton.feature.onboarding.R
 import ru.endroad.hakaton.feature.onboarding.domain.MainRouter
 import ru.endroad.hakaton.feature.onboarding.entity.Button
-import ru.endroad.hakaton.feature.onboarding.entity.Comics
 import ru.endroad.hakaton.feature.onboarding.entity.Listing
 import ru.endroad.hakaton.feature.onboarding.view.adapter.ListingAdapter
+import ru.endroad.hakaton.shared.spot.entity.Comics
 
 class OnboardingFragment : BaseFragment() {
 

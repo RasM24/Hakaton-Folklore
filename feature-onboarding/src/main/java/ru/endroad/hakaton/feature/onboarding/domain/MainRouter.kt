@@ -1,6 +1,6 @@
 package ru.endroad.hakaton.feature.onboarding.domain
 
-import ru.endroad.hakaton.feature.onboarding.entity.Comics
+import ru.endroad.hakaton.shared.spot.entity.Comics
 
 interface MainRouter {
 

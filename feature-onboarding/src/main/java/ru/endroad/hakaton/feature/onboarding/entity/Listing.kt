@@ -1,6 +1,7 @@
 package ru.endroad.hakaton.feature.onboarding.entity
 
 import ru.endroad.hakaton.feature.onboarding.R
+import ru.endroad.hakaton.shared.spot.entity.Comics
 import ru.endroad.hakaton.shared.spot.entity.Image
 
 sealed class Listing {
@@ -13,9 +14,4 @@ enum class Button(val icon: Image, val title: String) {
 	AUDIOGID(Image(R.drawable.ic_button_audiogid), "Аудиогид"),
 	ROUTES(Image(R.drawable.ic_button_routes), "Маршруты"),
 	MAP(Image(R.drawable.ic_button_map), "На карту"),
-}
-
-enum class Comics(val title: String) {
-	IVAN_GROZNIY("Иван Грозный перестает быть грозным"),
-	PARASKEEVA("Параскеева домоседка")
 }

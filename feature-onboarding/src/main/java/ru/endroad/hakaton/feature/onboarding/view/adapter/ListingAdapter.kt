@@ -3,10 +3,10 @@ package ru.endroad.hakaton.feature.onboarding.view.adapter
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ru.endroad.hakaton.feature.onboarding.entity.Button
-import ru.endroad.hakaton.feature.onboarding.entity.Comics
 import ru.endroad.hakaton.feature.onboarding.entity.Listing
 import ru.endroad.hakaton.feature.onboarding.entity.Listing.CategoryItem
 import ru.endroad.hakaton.feature.onboarding.entity.Listing.PointItem
+import ru.endroad.hakaton.shared.spot.entity.Comics
 
 class ListingAdapter(
 	private val onButtonClickListener: (Button) -> Unit,
