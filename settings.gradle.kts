@@ -33,6 +33,7 @@ include(":feature-map")
 include(":feature-interactive")
 include(":feature-route")
 include(":feature-onboarding")
+include(":feature-comics")
 
 include(":widget-audiogid")
 include(":widget-panorama")
