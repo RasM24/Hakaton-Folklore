@@ -2,27 +2,15 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
+	android:background="?android:selectableItemBackground"
 	android:layout_height="wrap_content">
 
 	<TextView
 		android:id="@+id/title"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:background="#AAA"
-		android:paddingHorizontal="24dp"
+		android:paddingHorizontal="56dp"
 		android:paddingVertical="16dp"
-		android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
 		tools:text="Title" />
 
-	<View
-		android:layout_width="match_parent"
-		android:layout_height="1dp"
-		android:layout_gravity="top"
-		android:background="#222" />
-
-	<View
-		android:layout_width="match_parent"
-		android:layout_height="1dp"
-		android:layout_gravity="bottom"
-		android:background="#222" />
 </FrameLayout>

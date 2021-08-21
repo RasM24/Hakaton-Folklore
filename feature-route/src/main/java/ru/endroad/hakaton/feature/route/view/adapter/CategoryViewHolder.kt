@@ -3,14 +3,13 @@ package ru.endroad.hakaton.feature.route.view.adapter
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import ru.endroad.component.common.showToast
 import ru.endroad.hakaton.feature.route.R
 import ru.endroad.hakaton.feature.route.entity.Listing
 
-class RouteViewHolder(viewParent: ViewGroup) : ListingViewHolder(viewParent.inflate(R.layout.item_route)) {
+class CategoryViewHolder(viewParent: ViewGroup) : ListingViewHolder(viewParent.inflate(R.layout.item_category)) {
 
-	fun bind(item: Listing.RouteItem) {
+	fun bind(item: Listing.CategoryItem) {
 		itemView.setOnClickListener { itemView.context.showToast("Click") }
 
 		itemView.findViewById<TextView>(R.id.name).text = item.name
