@@ -5,6 +5,7 @@ plugins {
 dependencies {
 	implementation(project(":component-common"))
 	implementation(project(":component-navigation"))
+	implementation(project(":shared-spot"))
 
 	implementation(AndroidX.core)
 	implementation(AndroidX.appcompat)

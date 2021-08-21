@@ -6,6 +6,7 @@ dependencies {
 	implementation(project(":feature-map"))
 	implementation(project(":feature-interactive"))
 	implementation(project(":feature-route"))
+	implementation(project(":feature-onboarding"))
 	implementation(project(":widget-panorama"))
 	implementation(project(":component-deeplink"))
 	implementation(project(":component-navigation"))
