@@ -16,11 +16,11 @@ val russaRoute = Route(
 		Position(57.995842, 31.375579),
 	)
 )
-internal val route2 = Route("Маршрут 2", listOf())
-internal val route3 = Route("Маршрут 3", listOf())
-internal val route4 = Route("Маршрут 4", listOf())
-internal val route5 = Route("Маршрут 5", listOf())
+internal val route2 = Route("Легенды Великого Новогорода", listOf())
+internal val route3 = Route("Сказания озера Ильмень", listOf())
+internal val route4 = Route("Церковный маршрут", listOf())
+internal val route5 = Route("Популярные Места Боровичи", listOf())
 
-internal val externalRoute1 = ExternalRoute("Google Маршрут 1", "link")
-internal val externalRoute2 = ExternalRoute("Google Маршрут 2", "link")
-internal val externalRoute3 = ExternalRoute("Google Маршрут 3", "link")
+internal val externalRoute1 = ExternalRoute("Путешествие на машине через Великий Новогород", "link")
+internal val externalRoute2 = ExternalRoute("Автобусный тур по окрестностям", "link")
+internal val externalRoute3 = ExternalRoute("Проезд Москва-Питер через легендарные места", "link")
