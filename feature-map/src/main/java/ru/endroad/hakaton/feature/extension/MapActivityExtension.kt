@@ -56,7 +56,7 @@ internal fun GoogleMap.prepareBubbleAdapter(context: Context) {
 }
 
 internal fun GoogleMap.setCameraPosition(position: Position) {
-	moveCamera(CameraUpdateFactory.newLatLngZoom(position.latLng, MAP_ZOOM_OVERALL))
+	moveCamera(CameraUpdateFactory.newLatLngZoom(position.latLng, MAP_ZOOM_SPOT))
 }
 
 internal fun GoogleMap.setupDefaultCameraPosition() {
