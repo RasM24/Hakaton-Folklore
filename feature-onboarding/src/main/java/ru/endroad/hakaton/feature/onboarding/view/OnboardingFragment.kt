@@ -1,6 +1,8 @@
 package ru.endroad.hakaton.feature.onboarding.view
 
 import android.view.View
+import android.view.View.GONE
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import org.koin.android.ext.android.inject
 import ru.endroad.component.common.BaseFragment
@@ -11,6 +13,12 @@ import ru.endroad.hakaton.feature.onboarding.entity.Button
 import ru.endroad.hakaton.feature.onboarding.entity.Listing
 import ru.endroad.hakaton.feature.onboarding.view.adapter.ListingAdapter
 import ru.endroad.hakaton.shared.spot.entity.Comics
+import android.animation.Animator
+
+import android.animation.AnimatorListenerAdapter
+
+
+
 
 class OnboardingFragment : BaseFragment() {
 
@@ -26,6 +34,17 @@ class OnboardingFragment : BaseFragment() {
 	@ExperimentalStdlibApi
 	override fun setupViewComponents(parent: View) {
 		parent.findViewById<RecyclerView>(R.id.list).adapter = adapter
+		parent.findViewById<ImageView>(R.id.panekelka).setOnClickListener {
+			it.animate()
+				.translationY(0f)
+				.alpha(0.0f)
+				.setListener(object : AnimatorListenerAdapter() {
+					override fun onAnimationEnd(animation: Animator) {
+						super.onAnimationEnd(animation)
+						it.visibility = GONE
+					}
+				})
+			}
 
 		adapter.items = getItemList()
 	}
