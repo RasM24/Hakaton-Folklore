@@ -93,4 +93,15 @@ internal fun GoogleMap.drawRoute(route: Route) {
 			geodesic(true)
 		}
 		.let(::addPolyline)
+
+	Position(57.995842, 31.375579).let(::addSimpleMarker)
+	Position(57.991167, 31.331087).let(::addSimpleMarker)
+	Position(57.997299, 31.343769).let(::addSimpleMarker)
+	Position(57.992307, 31.353730).let(::addSimpleMarker)
+	Position(57.993464, 31.371882).let(::addSimpleMarker)
+}
+
+private fun GoogleMap.addSimpleMarker(position: Position) {
+	MarkerOptions().apply { position(position.latLng) }
+		.let(::addMarker)
 }
