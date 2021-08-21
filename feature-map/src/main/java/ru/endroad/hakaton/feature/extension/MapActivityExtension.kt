@@ -21,6 +21,7 @@ import ru.endroad.hakaton.feature.map.BubbleAdapter
 import ru.endroad.hakaton.shared.route.entity.Route
 import ru.endroad.hakaton.shared.spot.entity.Position
 import ru.endroad.hakaton.shared.spot.entity.Spot
+import ru.endroad.hakaton.shared.spot.remote.RemoteSpot
 
 val KRASNOYARSK_OVERALL_LATLNG = LatLng(56.009824, 92.873895)
 val NOVGOROD_LATLNG = LatLng(58.556266, 31.2423957)
@@ -67,6 +68,17 @@ internal fun Context.checkLocationProvidesEnabled() {
 
 internal fun GoogleMap.addSpot(context: Context, spot: Spot) {
 	val markerIcon = context.bitmapFromVector(spot.icon.id)
+
+	MarkerOptions().apply {
+		position(spot.position.latLng)
+		icon(markerIcon)
+	}
+		.let(::addMarker)
+		.apply { tag = spot }
+}
+
+internal fun GoogleMap.addRemoteSpot(context: Context, spot: RemoteSpot) {
+	val markerIcon = context.bitmapFromVector(spot.type.icon.id)
 
 	MarkerOptions().apply {
 		position(spot.position.latLng)
