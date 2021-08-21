@@ -32,6 +32,7 @@ include(":app")
 include(":feature-map")
 include(":feature-interactive")
 include(":feature-route")
+include(":feature-onboarding")
 
 include(":widget-audiogid")
 include(":widget-panorama")
