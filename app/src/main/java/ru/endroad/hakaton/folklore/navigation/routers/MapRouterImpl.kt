@@ -24,10 +24,6 @@ class MapRouterImpl : MapRouter {
 		rootNavigator.execute(Command.Open(PanoramaDestination(image)))
 	}
 
-	override fun openRoutes() {
-		rootNavigator.execute(Command.Open(RouteRecommendationDestination))
-	}
-
 	override fun openComicsBottomSheet(comics: ComicsSpot) {
 		rootNavigator.execute(Command.Open(ComicsDestination(comics)))
 	}

@@ -38,8 +38,6 @@ internal class InteractiveMapFragment : BaseFragment() {
 	private val router: MapRouter by inject()
 
 	override fun setupViewComponents(parent: View) {
-		parent.findViewById<Button>(R.id.routes_button).setOnClickListener { router.openRoutes() }
-
 		(childFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment)
 			?.getMapAsync(::onMapReady)
 	}

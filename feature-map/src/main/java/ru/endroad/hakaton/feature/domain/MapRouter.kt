@@ -9,7 +9,5 @@ interface MapRouter {
 
 	fun openPanoramaBottomSheet(image: PanoramaPhotoSpot)
 
-	fun openRoutes()
-
 	fun openComicsBottomSheet(comics: ComicsSpot)
 }
