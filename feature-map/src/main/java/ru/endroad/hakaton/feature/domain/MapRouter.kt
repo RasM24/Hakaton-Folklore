@@ -7,4 +7,6 @@ interface MapRouter {
 	fun openAudiogidBottomSheet()
 
 	fun openPanoramaBottomSheet(image: PanoramaImage)
+
+	fun openRoutes()
 }

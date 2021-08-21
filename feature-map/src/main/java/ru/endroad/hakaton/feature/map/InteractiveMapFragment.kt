@@ -1,6 +1,7 @@
 package ru.endroad.hakaton.feature.map
 
 import android.view.View
+import android.widget.Button
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.SupportMapFragment
 import org.koin.android.ext.android.inject
@@ -34,6 +35,8 @@ internal class InteractiveMapFragment : BaseFragment() {
 	private val router: MapRouter by inject()
 
 	override fun setupViewComponents(parent: View) {
+		parent.findViewById<Button>(R.id.routes_button).setOnClickListener { router.openRoutes() }
+
 		(childFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment)
 			?.getMapAsync(::onMapReady)
 	}
