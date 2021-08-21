@@ -51,7 +51,7 @@ internal class InteractiveMapFragment : BaseFragment() {
 		googleMap.checkPermission()
 		googleMap.setupDefaultCameraPosition()
 
-		googleMap.drawRoute(russaRoute)
+//		googleMap.drawRoute(russaRoute)
 		googleMap.prepareMarkerClickListener(::markerClickHandler)
 		googleMap.prepareBubbleAdapter(requireContext())
 		googleMap.setOnBubbleClickListener { }
