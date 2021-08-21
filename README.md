@@ -18,6 +18,9 @@
 - Push-уведомления
 
 ## Демо
+Youtube Demo:
+https://youtu.be/H57fIz6-neQ
+
 Скачать APK:
 [NovFolklore.APK](https://github.com/RasM24/Hakaton-Folklore/blob/master/demo/app-release.apk)
 
