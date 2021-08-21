@@ -9,6 +9,7 @@ import ru.endroad.component.common.BaseFragment
 import ru.endroad.hakaton.feature.domain.MapRouter
 import ru.endroad.hakaton.feature.extension.addSpot
 import ru.endroad.hakaton.feature.extension.checkLocationProvidesEnabled
+import ru.endroad.hakaton.feature.extension.drawRoute
 import ru.endroad.hakaton.feature.extension.enableUserLocation
 import ru.endroad.hakaton.feature.extension.handleLocationPermissions
 import ru.endroad.hakaton.feature.extension.isGrantedLocationPermissions
@@ -17,6 +18,7 @@ import ru.endroad.hakaton.feature.extension.prepareMarkerClickListener
 import ru.endroad.hakaton.feature.extension.requestLocationPermissions
 import ru.endroad.hakaton.feature.extension.setOnBubbleClickListener
 import ru.endroad.hakaton.feature.extension.setupDefaultCameraPosition
+import ru.endroad.hakaton.shared.route.data.russaRoute
 import ru.endroad.hakaton.shared.spot.data.SpotDataSource
 import ru.endroad.hakaton.shared.spot.entity.ComicsSpot
 import ru.endroad.hakaton.shared.spot.entity.PanoramaPhotoSpot
@@ -46,6 +48,7 @@ internal class InteractiveMapFragment : BaseFragment() {
 		googleMap.checkPermission()
 		googleMap.setupDefaultCameraPosition()
 
+		googleMap.drawRoute(russaRoute)
 		googleMap.prepareMarkerClickListener(::markerClickHandler)
 		googleMap.prepareBubbleAdapter(requireContext())
 		googleMap.setOnBubbleClickListener { }

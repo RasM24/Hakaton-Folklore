@@ -7,6 +7,7 @@ dependencies {
 	implementation(project(":component-common"))
 	implementation(project(":component-navigation"))
 	implementation(project(":shared-spot"))
+	implementation(project(":shared-route"))
 
 	implementation(AndroidX.core)
 	implementation(AndroidX.appcompat)

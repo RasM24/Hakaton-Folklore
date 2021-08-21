@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
+import android.graphics.Color
 import android.location.LocationManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -15,12 +16,14 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.PolylineOptions
 import ru.endroad.hakaton.feature.map.BubbleAdapter
+import ru.endroad.hakaton.shared.route.entity.Route
 import ru.endroad.hakaton.shared.spot.entity.Position
 import ru.endroad.hakaton.shared.spot.entity.Spot
 
 val KRASNOYARSK_OVERALL_LATLNG = LatLng(56.009824, 92.873895)
-val NOVGOROD_LATLNG = LatLng(58.556266,31.2423957)
+val NOVGOROD_LATLNG = LatLng(58.556266, 31.2423957)
 const val MAP_ZOOM_OVERALL = 10.0f
 const val MAP_ZOOM_SPOT = 12.0f
 internal val Position.latLng: LatLng get() = LatLng(latitude, longitude)
@@ -81,3 +84,13 @@ internal fun Context.bitmapFromVector(vectorResId: Int): BitmapDescriptor? =
 		draw(Canvas(bitmap))
 		BitmapDescriptorFactory.fromBitmap(bitmap)
 	}
+
+internal fun GoogleMap.drawRoute(route: Route) {
+	PolylineOptions()
+		.apply {
+			route.path.map(Position::latLng).let(::addAll)
+			color(Color.MAGENTA)
+			geodesic(true)
+		}
+		.let(::addPolyline)
+}
