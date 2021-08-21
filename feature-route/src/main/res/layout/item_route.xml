@@ -12,4 +12,10 @@
 		android:paddingVertical="16dp"
 		android:textAppearance="@style/TextAppearance.AppCompat.Body1"
 		tools:text="Route Name" />
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="#222"
+		android:layout_marginHorizontal="48dp" />
 </FrameLayout>

@@ -2,6 +2,7 @@ package ru.endroad.hakaton.feature.route.entity
 
 import ru.endroad.hakaton.shared.route.entity.ExternalRoute
 import ru.endroad.hakaton.shared.route.entity.Route
+import ru.endroad.hakaton.shared.spot.entity.Image
 
 sealed class Listing {
 	data class PromoItem(val promo: List<Promo>) : Listing()
@@ -10,4 +11,4 @@ sealed class Listing {
 	data class ExternalRouteItem(val data: ExternalRoute) : Listing()
 }
 
-data class Promo(val title: String, val description: String)
+data class Promo(val title: String, val description: String, val background: Image)

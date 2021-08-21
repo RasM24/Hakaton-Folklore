@@ -17,6 +17,6 @@ val moduleNavigation = module {
 	single<NavigationCommandExecutor>()
 	single<DeeplinkConverter>()
 
-	single(rootNavigatorQualifier) { Navigator(R.id.root, get(), get()) }
+	single(rootNavigatorQualifier) { Navigator(R.id.promo_layout, get(), get()) }
 	single(contentNavigatorQualifier) { Navigator(R.id.content, get(), get()) }
 }

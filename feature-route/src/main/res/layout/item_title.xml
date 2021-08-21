@@ -13,4 +13,16 @@
 		android:paddingVertical="16dp"
 		android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
 		tools:text="Title" />
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_gravity="top"
+		android:background="#222" />
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_gravity="bottom"
+		android:background="#222" />
 </FrameLayout>

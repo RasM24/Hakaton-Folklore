@@ -11,6 +11,7 @@ object PromoViewHolder {
 
 	operator fun invoke(promo: Promo, viewParent: ViewGroup): View =
 		viewParent.inflate(R.layout.item_carusel_promo).apply {
+			findViewById<ViewGroup>(R.id.promo_layout).setBackgroundResource(promo.background.id)
 			findViewById<TextView>(R.id.promo_title).text = promo.title
 			findViewById<TextView>(R.id.promo_description).text = promo.description
 		}
