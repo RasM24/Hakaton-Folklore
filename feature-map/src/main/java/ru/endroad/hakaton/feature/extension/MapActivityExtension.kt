@@ -21,8 +21,8 @@ import ru.endroad.hakaton.shared.spot.entity.Spot
 
 val KRASNOYARSK_OVERALL_LATLNG = LatLng(56.009824, 92.873895)
 val NOVGOROD_LATLNG = LatLng(58.556266,31.2423957)
-const val MAP_ZOOM_OVERALL = 12.573985f
-const val MAP_ZOOM_SPOT = 14.104337f
+const val MAP_ZOOM_OVERALL = 10.0f
+const val MAP_ZOOM_SPOT = 12.0f
 internal val Position.latLng: LatLng get() = LatLng(latitude, longitude)
 
 @SuppressLint("MissingPermission")

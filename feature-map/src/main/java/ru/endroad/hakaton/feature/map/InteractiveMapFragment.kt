@@ -18,6 +18,7 @@ import ru.endroad.hakaton.feature.extension.requestLocationPermissions
 import ru.endroad.hakaton.feature.extension.setOnBubbleClickListener
 import ru.endroad.hakaton.feature.extension.setupDefaultCameraPosition
 import ru.endroad.hakaton.shared.spot.data.SpotDataSource
+import ru.endroad.hakaton.shared.spot.entity.ComicsSpot
 import ru.endroad.hakaton.shared.spot.entity.PanoramaPhotoSpot
 import ru.endroad.hakaton.shared.spot.entity.Sight
 import ru.endroad.hakaton.shared.spot.entity.Spot
@@ -50,6 +51,7 @@ internal class InteractiveMapFragment : BaseFragment() {
 		googleMap.setOnBubbleClickListener { }
 
 		spotDataSource.getSightList().forEach { googleMap.addSpot(requireContext(), it) }
+		spotDataSource.getComics().forEach { googleMap.addSpot(requireContext(), it) }
 		spotDataSource.getPhotoSpotList().forEach { googleMap.addSpot(requireContext(), it) }
 	}
 
@@ -57,6 +59,7 @@ internal class InteractiveMapFragment : BaseFragment() {
 		when (spot) {
 			is PanoramaPhotoSpot -> router.openPanoramaBottomSheet(spot)
 			is Sight             -> router.openAudiogidBottomSheet()
+			is ComicsSpot        -> router.openComicsBottomSheet(spot)
 		}
 	}
 

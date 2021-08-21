@@ -12,4 +12,10 @@
 	<string name="panorama_sight">Памятник Дзержинскому</string>
 	<string name="panorama_lenin">Площадь В.И. Ленина</string>
 	<string name="panorama_gymnasium">Женская Гимназия</string>
+
+	<string name="comics_ermolaevo">Ермолаево</string>
+	<string name="comics_cerkov_nikoly">Церковь Николая</string>
+	<string name="comics_podberezie">Подберезье</string>
+	<string name="comics_luga">Луга</string>
+	<string name="comics_shimskii">Шимский</string>
 </resources>
