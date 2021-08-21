@@ -1,12 +1,9 @@
-package ru.endroad.widget.panorama.image
+package ru.endroad.hakaton.feature.interactive.extension
 
+import ru.endroad.hakaton.shared.spot.entity.PanoramaPhotoSpot
 import ru.endroad.widget.panorama.TexturePathes
-import java.io.Serializable
 
-@JvmInline
-value class PanoramaImage(val path: String) : Serializable
-
-val PanoramaImage.textures: TexturePathes
+val PanoramaPhotoSpot.textures: TexturePathes
 	get() = TexturePathes(
 		top = "${path}top.jpg",
 		bottom = "${path}bottom.jpg",

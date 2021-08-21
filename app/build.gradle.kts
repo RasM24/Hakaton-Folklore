@@ -9,6 +9,7 @@ dependencies {
 	implementation(project(":widget-panorama"))
 	implementation(project(":component-deeplink"))
 	implementation(project(":component-navigation"))
+	implementation(project(":shared-spot"))
 
 	implementation(AndroidX.core)
 	implementation(AndroidX.appcompat)

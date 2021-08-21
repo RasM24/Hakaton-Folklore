@@ -18,12 +18,9 @@ import ru.endroad.hakaton.feature.extension.requestLocationPermissions
 import ru.endroad.hakaton.feature.extension.setOnBubbleClickListener
 import ru.endroad.hakaton.feature.extension.setupDefaultCameraPosition
 import ru.endroad.hakaton.shared.spot.data.SpotDataSource
-import ru.endroad.hakaton.shared.spot.entity.Parking
-import ru.endroad.hakaton.shared.spot.entity.PhotoSpot
+import ru.endroad.hakaton.shared.spot.entity.PanoramaPhotoSpot
 import ru.endroad.hakaton.shared.spot.entity.Sight
 import ru.endroad.hakaton.shared.spot.entity.Spot
-import ru.endroad.hakaton.shared.spot.entity.Toilet
-import ru.endroad.widget.panorama.image.panoramaImage1
 
 internal class InteractiveMapFragment : BaseFragment() {
 
@@ -52,18 +49,14 @@ internal class InteractiveMapFragment : BaseFragment() {
 		googleMap.prepareBubbleAdapter(requireContext())
 		googleMap.setOnBubbleClickListener { }
 
-		googleMap.addSpot(requireContext(), spotDataSource.getParkingList().first())
-		googleMap.addSpot(requireContext(), spotDataSource.getSightList().first())
-		googleMap.addSpot(requireContext(), spotDataSource.getPhotoSpotList().first())
-		googleMap.addSpot(requireContext(), spotDataSource.getToiletList().first())
+		spotDataSource.getSightList().forEach { googleMap.addSpot(requireContext(), it) }
+		spotDataSource.getPhotoSpotList().forEach { googleMap.addSpot(requireContext(), it) }
 	}
 
 	private fun markerClickHandler(spot: Spot) {
 		when (spot) {
-			is Parking   -> Unit
-			is PhotoSpot -> router.openPanoramaBottomSheet(panoramaImage1)
-			is Sight     -> router.openAudiogidBottomSheet()
-			is Toilet    -> Unit
+			is PanoramaPhotoSpot -> router.openPanoramaBottomSheet(spot)
+			is Sight             -> router.openAudiogidBottomSheet()
 		}
 	}
 

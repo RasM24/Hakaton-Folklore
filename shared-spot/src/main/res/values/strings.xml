@@ -5,4 +5,11 @@
 	<string name="spot_category_toilet">Туалет</string>
 
 	<string name="sight_opera">Театр оперы и балета</string>
+
+	<string name="panorama_winter">Зимние дворы</string>
+	<string name="panorama_ped">Педагогический институт</string>
+	<string name="panorama_street">Улица мира</string>
+	<string name="panorama_sight">Памятник Дзержинскому</string>
+	<string name="panorama_lenin">Площадь В.И. Ленина</string>
+	<string name="panorama_gymnasium">Женская Гимназия</string>
 </resources>

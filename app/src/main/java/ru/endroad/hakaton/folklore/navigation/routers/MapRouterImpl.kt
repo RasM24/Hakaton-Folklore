@@ -8,7 +8,7 @@ import ru.endroad.hakaton.feature.interactive.view.AudiogidDestination
 import ru.endroad.hakaton.feature.interactive.view.PanoramaDestination
 import ru.endroad.hakaton.feature.route.view.RouteRecommendationDestination
 import ru.endroad.hakaton.folklore.navigation.di.rootNavigatorQualifier
-import ru.endroad.widget.panorama.image.PanoramaImage
+import ru.endroad.hakaton.shared.spot.entity.PanoramaPhotoSpot
 
 class MapRouterImpl : MapRouter {
 
@@ -18,7 +18,7 @@ class MapRouterImpl : MapRouter {
 		rootNavigator.execute(Command.Open(AudiogidDestination()))
 	}
 
-	override fun openPanoramaBottomSheet(image: PanoramaImage) {
+	override fun openPanoramaBottomSheet(image: PanoramaPhotoSpot) {
 		rootNavigator.execute(Command.Open(PanoramaDestination(image)))
 	}
 

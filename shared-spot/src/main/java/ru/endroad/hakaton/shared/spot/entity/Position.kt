@@ -1,3 +1,5 @@
 package ru.endroad.hakaton.shared.spot.entity
 
-data class Position(val latitude: Double, val longitude: Double)
+import java.io.Serializable
+
+data class Position(val latitude: Double, val longitude: Double):Serializable

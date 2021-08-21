@@ -5,7 +5,7 @@ import ru.endroad.hakaton.shared.spot.R
 data class Sight(
 	override val id: Long,
 	override val position: Position,
-	val name: Text,
+	override val name: Text,
 	val headImage: Image,
 ) : Spot {
 

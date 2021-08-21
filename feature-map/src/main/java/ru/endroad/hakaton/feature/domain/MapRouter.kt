@@ -1,12 +1,12 @@
 package ru.endroad.hakaton.feature.domain
 
-import ru.endroad.widget.panorama.image.PanoramaImage
+import ru.endroad.hakaton.shared.spot.entity.PanoramaPhotoSpot
 
 interface MapRouter {
 
 	fun openAudiogidBottomSheet()
 
-	fun openPanoramaBottomSheet(image: PanoramaImage)
+	fun openPanoramaBottomSheet(image: PanoramaPhotoSpot)
 
 	fun openRoutes()
 }

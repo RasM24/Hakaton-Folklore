@@ -20,6 +20,7 @@ import ru.endroad.hakaton.shared.spot.entity.Position
 import ru.endroad.hakaton.shared.spot.entity.Spot
 
 val KRASNOYARSK_OVERALL_LATLNG = LatLng(56.009824, 92.873895)
+val NOVGOROD_LATLNG = LatLng(58.556266,31.2423957)
 const val MAP_ZOOM_OVERALL = 12.573985f
 const val MAP_ZOOM_SPOT = 14.104337f
 internal val Position.latLng: LatLng get() = LatLng(latitude, longitude)
@@ -51,7 +52,7 @@ internal fun GoogleMap.prepareBubbleAdapter(context: Context) {
 }
 
 internal fun GoogleMap.setupDefaultCameraPosition() {
-	moveCamera(CameraUpdateFactory.newLatLngZoom(KRASNOYARSK_OVERALL_LATLNG, MAP_ZOOM_OVERALL))
+	moveCamera(CameraUpdateFactory.newLatLngZoom(NOVGOROD_LATLNG, MAP_ZOOM_OVERALL))
 }
 
 @Deprecated("Необходим рефактор логики")
