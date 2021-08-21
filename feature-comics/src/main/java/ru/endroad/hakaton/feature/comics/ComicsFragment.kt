@@ -1,6 +1,7 @@
 package ru.endroad.hakaton.feature.comics
 
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import org.koin.android.ext.android.inject
@@ -34,6 +35,6 @@ class ComicsFragment : BaseFragment() {
 		val comicsId = comics.image.id
 		image.setImageResource(comicsId)
 
-		parent.findViewById<ImageView>(R.id.map).setOnClickListener { router.openMap(comics.position) }
+		parent.findViewById<Button>(R.id.map).setOnClickListener { router.openMap(comics.position) }
 	}
 }
