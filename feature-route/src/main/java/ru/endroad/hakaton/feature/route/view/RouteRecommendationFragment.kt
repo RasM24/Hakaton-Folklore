@@ -38,9 +38,9 @@ class RouteRecommendationFragment : BaseFragment() {
 			add(Listing.RouteItem(Image(R.drawable.ic_icon_auto), "Удалой ямщик"))
 			add(Listing.RouteItem(Image(R.drawable.ic_icon_step), "Безлошадный крестьянин"))
 
-			add(Listing.CategoryItem(Image(R.drawable.ic_radio), "Radio"))
-			add(Listing.CategoryItem(Image(R.drawable.ic_book), "Recipes"))
-			add(Listing.CategoryItem(Image(R.drawable.ic_bike), "Sports"))
-			add(Listing.CategoryItem(Image(R.drawable.ic_airplane), "Travel"))
+//			add(Listing.CategoryItem(Image(R.drawable.ic_radio), "Radio"))
+//			add(Listing.CategoryItem(Image(R.drawable.ic_book), "Recipes"))
+//			add(Listing.CategoryItem(Image(R.drawable.ic_bike), "Sports"))
+//			add(Listing.CategoryItem(Image(R.drawable.ic_airplane), "Travel"))
 		}
 }
