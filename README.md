@@ -25,7 +25,7 @@ https://youtu.be/H57fIz6-neQ
 [NovFolklore.APK](https://github.com/RasM24/Hakaton-Folklore/blob/master/demo/app-release.apk)
 
 Скачать GooglePlay:
-[В процессе]
+[Link](https://play.google.com/store/apps/details?id=ru.endroad.hakaton.folklore)
 
 
 #### Скриншоты
